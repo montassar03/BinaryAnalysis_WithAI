@@ -695,7 +695,24 @@ This evaluation directly measures the quality of the learned embedding space.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-The evaluation/ directory is organized to clearly separate source code, generated artifacts, logs, and final results to ensure reproducibility and maintainability.
+# A clear structure for identifying relevant scripts, logs, checkpoints, and essential project components.
+
+## Binary analysis and input generation.
+Inside `angr-palmtree/training`, you can find the scripts used to generate the training pairs for PalmTree.
+Since the generated .txt files containing the training pairs (derived from control-flow and data-flow information) are too large to upload to GitHub, I have not included them in this repository. They will be made available through an alternative source.
+
+## Shard Generation and Tensor Preprocessing
+
+- The preprocessing script for generating the tensor datasets is located in `PalmTree/src/` and is named `preprocess_dataset.py`. Since the resulting preprocessed tensors are too large to include in this repository, they will be provided through alternative means.
+
+- The script PalmTree/src/train_palmtree_SHARD.py is the modified training script that uses the preprocessed tensor shards for training, instead of loading the generated .txt pair files directly.
+
+## Training variants
+All checkpoints are directly accessible under PalmTree/FullTraining_*, where you will find the corresponding vocabulary files and trained transformer models.
+
+
+## Evaluation
+The PalmTree/evaluation/ directory is organized to clearly separate source code, generated artifacts, logs, and final results to ensure reproducibility and maintainability.
 - src/
  Contains all Python scripts used for embedding generation and retrieval evaluation (e.g., embedding extraction, ranking, NDCG computation).
 - embeddings/
