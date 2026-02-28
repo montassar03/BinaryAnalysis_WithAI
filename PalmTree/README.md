@@ -1,4 +1,4 @@
-Submission_BinaryAnalysis_WithAI
+Submission_BinaryAnalysis_WithAI  
 Evaluation Directory Structure
 The evaluation/ directory is structured to clearly separate implementation code from generated outputs to keep the project organized and easy to review.
 
