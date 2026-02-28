@@ -1,0 +1,7 @@
+{
+  "model": "embeddings_FullTraining_All.npy",
+  "num_anchors_evaluated": 27845,
+  "Recall@1": 0.8637816484108457,
+  "Recall@10": 0.9444065361824385,
+  "MRR": 0.8958475017384363
+}

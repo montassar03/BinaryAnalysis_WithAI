@@ -1,0 +1,9 @@
+{
+  "model": "embeddings_FullTraining_MLM_CWP.npy",
+  "num_anchors_evaluated": 27845,
+  "Recall@1": 0.8619141677141318,
+  "Recall@10": 0.9429700125695816,
+  "MRR": 0.8944629864030069,
+  "NDCG": 0.7764499486803694,
+  "NDCG@10": 0.7161734347630246
+}
