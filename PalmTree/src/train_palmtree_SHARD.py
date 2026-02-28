@@ -122,9 +122,9 @@ train_dataset = PalmTreeShardDataset(SHARD_DIR)
 print("Creating Dataloader")
 train_data_loader = DataLoader(
     train_dataset,
-    batch_size=512,              # start higher; H100 can handle this easily at seq_len=20
-    shuffle=False,               # IMPORTANT: avoids shard thrashing; see note below
-    num_workers=12,               # raise workers to feed GPU
+    batch_size=512,              
+    shuffle=False,               
+    num_workers=12,               
     pin_memory=True,
     persistent_workers=True,
     prefetch_factor=4,
